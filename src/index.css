@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #FFFFFF;
+  --color-ivory: #FAF8F5;
+  --color-cream: #F4EFE6;
+  --color-charcoal: #252525;
+  --color-ink: #1F1F1F;
+  --color-stone: #6E6A64;
+  --color-gold: #C5A059;
+  --color-gold-hover: #B08D44;
+  --color-gold-soft: #F7F2E7;
+  --color-border: #EAE6E0;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-charcoal);
+    background: linear-gradient(180deg, #FAF8F5 0%, #FFFFFF 38%, #F7F3EC 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  section[id],
+  div[id],
+  footer[id] {
+    scroll-margin-top: 90px;
+  }
+
+  button:not(:disabled),
+  a[href] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: #ffffff;
+  }
+}
+
+.section-accent-bar {
+  display: inline-block;
+  width: 64px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #C5A059 0%, #DEC38A 100%);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D1C7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
